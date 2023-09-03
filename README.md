@@ -25,3 +25,9 @@
 1. Убедитесь, что у вас установлены библиотеки `requests` и `asterisk.manager`.
 2. Установите все необходимые переменные окружения.
 3. Запустите скрип
+
+### Начало работы в docker
+1. У вас должен быть установлен docker и docker-compose . Скрипт установки тут https://github.com/roysbike/scripts/blob/main/install_docker.sh
+2. Скопируйте проект
+3. docker-compose build
+4. docker-compose up или docker-compose up -d как демон
