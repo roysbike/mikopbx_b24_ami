@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  ami_script:
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    container_name: sync_pbx_b24
+    volumes:
+      - ./docker/sync_queue_asterisk.py:/app/sync_queue_asterisk.py
+    environment:
+      - ASTERISK_IP=sip.example.com
+      - AMI_USERNAME=1cami
+      - AMI_PASSWORD=pass
+      - QUEUE_NAME=name_QUEUE
+      - B24_DEPARTMENT_ID=41
+      - B24_HOOK=https://company.bitrix24.com/rest/41/token
