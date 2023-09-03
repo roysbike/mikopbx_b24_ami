@@ -3,7 +3,7 @@ version: '3'
 services:
   ami_script:
     build:
-      context: docker
+      context: .
       dockerfile: Dockerfile
     container_name: sync_pbx_b24
     volumes:
